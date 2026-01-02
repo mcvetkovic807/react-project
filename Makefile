@@ -19,15 +19,15 @@ help: ## Show available make targets
 # -----------------------------
 # Lifecycle
 # -----------------------------
-.PHONY: dev
-dev: build up ## Build and start local dev environment
+.PHONY: start
+start: build up ## Build and start local dev environment
 
 .PHONY: stop
 stop: ## Stop local environment
 	$(COMPOSE) down --remove-orphans
 
 .PHONY: restart
-restart: stop dev ## Restart local environment
+restart: stop start ## Restart local environment
 
 # -----------------------------
 # Build
