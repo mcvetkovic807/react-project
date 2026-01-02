@@ -2,12 +2,11 @@ import './App.css'
 
 function App() {
 
-    function Header(props) {
-        // console.log(props);
+    function Header({ name, year }) {
         return (
             <header>
-                <h1>{props.name}'s Kitchen</h1>
-                <p>Copyright {props.year}</p>
+                <h1>{name}'s Kitchen</h1>
+                <p>Copyright {year}</p>
             </header>
         )
     }
