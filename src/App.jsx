@@ -11,12 +11,26 @@ function App() {
         )
     }
 
+    const items= [
+        "Macaroni with Chese",
+        "Salmon with Potatoes",
+        "Tofu with Vegetables"
+    ];
+
+    function Main({ dishes }) {
+        return (
+            <ul>
+                {dishes.map((dish, i) => (
+                    <li style={{ listStyleType: "none" }} key={i}>{dish}</li>
+                ))}
+            </ul>
+        )
+    }
+
     return (
         <div>
             <Header name="Alex" year={new Date().getFullYear()} />
-            <main>
-                <h2>We serve the most delicious food around</h2>
-            </main>
+            <Main dishes={items} />
         </div>
     );
 }
