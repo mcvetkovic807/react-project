@@ -1,4 +1,5 @@
 import './App.css'
+import chef from "./images/chef.jpg";
 
 function App() {
 
@@ -25,11 +26,14 @@ function App() {
 
     function Main({ dishes }) {
         return (
-            <ul>
-                {dishes.map((dish) => (
-                    <li style={{ listStyleType: "none" }} key={dish.id}>{dish.title}</li>
-                ))}
-            </ul>
+            <main>
+                <img src={chef} height={200} alt="A photo of a smiling chef owner" />
+                <ul>
+                    {dishes.map((dish) => (
+                        <li style={{ listStyleType: "none" }} key={dish.id}>{dish.title}</li>
+                    ))}
+                </ul>
+            </main>
         )
     }
 
